@@ -1,0 +1,5 @@
+<html>
+<body>
+	{errorCode} - {errorMessage}
+</body>
+</html>
