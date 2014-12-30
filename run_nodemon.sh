@@ -1,0 +1,1 @@
+NODE_ENV=development /opt/nodejs/bin/nodemon /opt/Dropbox/projects/nplate/ --watch /opt/Dropbox/projects/nplate/ --ext .js,.html,.css,.dust
