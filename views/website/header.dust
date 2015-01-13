@@ -1,0 +1,6 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Language: {lang}</h1>
+        <p>MISC: {misc|s}</p>
+        <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+	</div>

@@ -1,35 +1,37 @@
 {
-	"name": "N-template",
-	"version": "1.0.0",
-	"description": "simple responsive website template",
-	"private": true,
-	"main": "index.js",
-	"author": {
-		"name": "Noam Lin"
-	},
-	"contributors": [
-		{
-			"name": "Noam Lin",
-			"email": "noamlin@gmail.com"
-		}
-	],
-	"scripts": {
-		"start": "node ./bin/www"
-	},
-	"engines": {
-		"node" : ">=0.10.28"
-	},
-	"dependencies": {
-		"express": "~4.9.0",
-		"serve-favicon": "~2.0",
-		"body-parser": "~1.8.1",
-		"cookie-parser": "~1.3.3",
-		"morgan": "~1.3.0",
-		"serve-favicon": "~2.1.3",
-		"debug": "~2.0.0",
-		"less-middleware": "~1.0.0",
-		"mongodb": "~1.4.19",
-		"dustjs-linkedin": "~2.5.0",
-		"extend": "~2.0.0"
-	}
+  "name": "N-template",
+  "version": "1.0.0",
+  "description": "simple responsive website template",
+  "private": true,
+  "main": "index.js",
+  "author": {
+    "name": "Noam Lin"
+  },
+  "contributors": [
+    {
+      "name": "Noam Lin",
+      "email": "noamlin@gmail.com"
+    }
+  ],
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": ">=0.10.28"
+  },
+  "dependencies": {
+    "body-parser": "1.8.x",
+    "bunyan": "1.2.x",
+    "connect-mongo": "0.5.x",
+    "cookie-parser": "1.3.x",
+    "debug": "2.0.x",
+    "dustjs-linkedin": "2.5.x",
+    "express": "4.9.x",
+    "express-session": "1.10.x",
+    "extend": "2.0.x",
+    "mongodb": "1.4.x",
+    "mongoose": "3.8.x",
+    "morgan": "1.3.x",
+    "serve-favicon": "2.1.x"
+  }
 }

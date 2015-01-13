@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"out",
+				"output"
+			],
+			[
+				"sta",
+				"stackLength"
+			],
+			[
+				"err",
+				"errorText"
+			],
+			[
 				"ma",
 				"margin-bottom"
 			],
@@ -36,10 +48,34 @@
 	"buffers":
 	[
 		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 387,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 1903,
+				"buffer_size": 2518,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/globals.js",
+			"settings":
+			{
+				"buffer_size": 5742,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/dust-renderer.js",
+			"settings":
+			{
+				"buffer_size": 2838,
 				"line_ending": "Unix"
 			}
 		},
@@ -47,23 +83,23 @@
 			"file": "routes/website.js",
 			"settings":
 			{
-				"buffer_size": 182,
+				"buffer_size": 195,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "controllers/home.js",
+			"file": "controllers/website/home.js",
 			"settings":
 			{
-				"buffer_size": 165,
+				"buffer_size": 326,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/home.dust",
+			"file": "views/website/home.dust",
 			"settings":
 			{
-				"buffer_size": 24287,
+				"buffer_size": 4732,
 				"line_ending": "Unix"
 			}
 		}
@@ -118,8 +154,34 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/opt/Dropbox/projects/nplate",
+		"/opt/Dropbox/projects/nplate/controllers",
+		"/opt/Dropbox/projects/nplate/controllers/website",
+		"/opt/Dropbox/projects/nplate/lib",
+		"/opt/Dropbox/projects/nplate/views",
+		"/opt/Dropbox/projects/nplate/views/website"
+	],
 	"file_history":
 	[
+		"/opt/Dropbox/projects/nplate/lib/mongoose/mdb.js",
+		"/opt/Dropbox/projects/nplate/controllers/home.js",
+		"/opt/Dropbox/projects/nplate/views/home.dust",
+		"/opt/Dropbox/projects/nplate/views/header.js",
+		"/opt/Dropbox/projects/nplate/views/website-skeleton.js",
+		"/opt/Dropbox/projects/nplate/lib/is-client-bot.js",
+		"/opt/Dropbox/projects/nplate/lib/session-options.js",
+		"/var/www/html/kungfu/index.php",
+		"/var/www/html/kungfu/js/scripts.js",
+		"/var/www/html/kungfu/ajax_submit_contact.php",
+		"/var/www/html/kungfu/functions.php",
+		"/home/noam/Downloads/responder_SDK/index.php",
+		"/home/noam/Downloads/responder_SDK/OAuth.php",
+		"/tmp/fz3temp-1/.htaccess",
+		"/opt/Dropbox/projects/nplate/lib/globals.js",
+		"/opt/Dropbox/projects/nplate/lib/i18n.js",
+		"/opt/Dropbox/projects/nplate/lib/mongoose/member-schema.js",
 		"/opt/Dropbox/projects/tickets/public/js/wsGlobal.js",
 		"/opt/Dropbox/projects/nplate/public/css/style.less",
 		"/mnt/ntfs_687gb/wamp/www/monochrome/admin/index.php",
@@ -209,7 +271,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -223,6 +285,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"home.dust",
+			"G.",
 			"query",
 			"loadSou",
 			"compile",
@@ -262,24 +326,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app.js",
+					"file": "index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1903,
+						"buffer_size": 387,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								301,
-								301
+								44,
+								44
 							]
 						],
 						"settings":
@@ -290,24 +354,110 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "routes/website.js",
+					"file": "app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 182,
+						"buffer_size": 2518,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								156,
-								156
+								273,
+								273
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 731.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/globals.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3696,
+								3696
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1668.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/dust-renderer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1776,
+								1776
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 459.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "routes/website.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								130,
+								130
 							]
 						],
 						"settings":
@@ -322,25 +472,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "controllers/home.js",
+					"buffer": 5,
+					"file": "controllers/website/home.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 165,
+						"buffer_size": 326,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								159,
-								159
+								117,
+								117
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -350,31 +501,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "views/home.dust",
+					"buffer": 6,
+					"file": "views/website/home.dust",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 24287,
+						"buffer_size": 4732,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1932,
-								1932
+								80,
+								80
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 324.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -382,7 +535,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -418,7 +571,7 @@
 	"project": "nplate.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -453,7 +606,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 227.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

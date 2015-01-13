@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-var home = require('../controllers/home.js');
+var home = require('../controllers/website/home.js');
 router.get('/:part?', home);
 
 module.exports = router;
