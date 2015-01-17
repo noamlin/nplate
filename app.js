@@ -1,8 +1,6 @@
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
-//var logger = require('morgan');
-//var lessMiddleware = require('less-middleware');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
@@ -54,11 +52,15 @@ app.use(function(req, res, next) {
 // will print stacktrace
 if(process.env.NODE_ENV === 'development') {
 	app.use(function(err, req, res, next) {
+		if(!err.status || err.status!=404){ // <<<<<<<<<<<<<<<<<<<<<<<<<<<< WAS HERE
+			bunyanLog.warn(err);
+		}
+		consoleDump(res.dustRender);
 		res.dustRender(
 			"error.dust",
 			{
 				errorCode: err.status,
-				errorMessage: err
+				errorMessage: err.stack
 			},
 			function(output) {
 				res.status(err.status || 500).send(output);

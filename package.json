@@ -31,7 +31,6 @@
     "extend": "2.0.x",
     "mongodb": "1.4.x",
     "mongoose": "3.8.x",
-    "morgan": "1.3.x",
     "serve-favicon": "2.1.x"
   }
 }

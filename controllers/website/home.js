@@ -1,6 +1,9 @@
 var dust = require('dustjs-linkedin');
 
-module.exports = function(req, res) {
+module.exports = function(req, res, next) {
+	if(!req.params.part || (req.params.part!=='html' && req.params.part!=='dust' && req.params.part!=='json'))
+		next(); // <<<<<<<<<<<<<< WAS HERE
+
 	res.dustRender(
 		"website/home.dust",
 		{
