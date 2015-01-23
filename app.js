@@ -39,50 +39,16 @@ app.use('/admin', adminPanel_router);
 var website_router = require('./routes/website');
 app.use('/', website_router);
 
-/// catch 404 and forward to error handler
+/// last function in the chain. meaning no page was found so catch 404 and forward to error handler
 app.use(function(req, res, next) {
-	var err = new Error('Not Found');
+	var err = new Error('Page Not Found');
 	err.status = 404;
 	next(err);
 });
 
 /// error handlers
+var errorControl = require('./controllers/error.js');
+app.use(errorControl);
 
-// development error handler
-// will print stacktrace
-if(process.env.NODE_ENV === 'development') {
-	app.use(function(err, req, res, next) {
-		if(!err.status || err.status!=404){ // <<<<<<<<<<<<<<<<<<<<<<<<<<<< WAS HERE
-			bunyanLog.warn(err);
-		}
-		consoleDump(res.dustRender);
-		res.dustRender(
-			"error.dust",
-			{
-				errorCode: err.status,
-				errorMessage: err.stack
-			},
-			function(output) {
-				res.status(err.status || 500).send(output);
-			}
-		);
-	});
-}
-else {
-	// production error handler
-	// no stacktraces leaked to user
-	app.use(function(err, req, res, next) {
-		res.dustRender(
-			"error.dust",
-			{
-				errorCode: err.status,
-				errorMessage: err.message
-			},
-			function(output) {
-				res.status(err.status || 500).send(output);
-			}
-		);
-	});
-}
 
 module.exports = app;

@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"requests"
+			],
+			[
+				"dom",
+				"domainListeners"
+			],
+			[
+				"req",
+				"requestDomain"
+			],
+			[
+				"eve",
+				"eventEmitter"
+			],
+			[
+				"err",
+				"errorControl"
+			],
+			[
+				"out",
+				"output"
+			],
+			[
+				"sta",
+				"stackLength"
+			],
+			[
 				"ma",
 				"margin-bottom"
 			],
@@ -39,15 +67,7 @@
 			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 3431,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "run_nodemon.sh",
-			"settings":
-			{
-				"buffer_size": 146,
+				"buffer_size": 3982,
 				"line_ending": "Unix"
 			}
 		},
@@ -55,7 +75,23 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 2577,
+				"buffer_size": 1949,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/error.js",
+			"settings":
+			{
+				"buffer_size": 760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/error.dust",
+			"settings":
+			{
+				"buffer_size": 417,
 				"line_ending": "Unix"
 			}
 		},
@@ -68,34 +104,18 @@
 			}
 		},
 		{
-			"file": "controllers/home.js",
+			"file": "controllers/website/home.js",
 			"settings":
 			{
-				"buffer_size": 312,
+				"buffer_size": 478,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "lib/mongoose/mdb.js",
+			"file": "views/website/home.dust",
 			"settings":
 			{
-				"buffer_size": 1527,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/dust-renderer.js",
-			"settings":
-			{
-				"buffer_size": 2838,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "node_modules/dustjs-linkedin/lib/server.js",
-			"settings":
-			{
-				"buffer_size": 421,
+				"buffer_size": 4732,
 				"line_ending": "Unix"
 			}
 		}
@@ -153,22 +173,34 @@
 	"expanded_folders":
 	[
 		"/opt/Dropbox/projects/nplate",
+		"/opt/Dropbox/projects/nplate/controllers/website",
 		"/opt/Dropbox/projects/nplate/lib",
-		"/opt/Dropbox/projects/nplate/lib/mongoose"
+		"/opt/Dropbox/projects/nplate/views/website"
 	],
 	"file_history":
 	[
+		"/opt/Dropbox/projects/nplate/lib/domain-listeners.js",
+		"/opt/Dropbox/projects/nplate/lib/domain-errors.js",
+		"/opt/Dropbox/projects/nplate/lib/dust-renderer.js",
+		"/opt/Dropbox/projects/nplate/lib/mongoose/mdb.js",
 		"/opt/Dropbox/projects/nplate/run_nodemon.sh",
-		"/opt/Dropbox/projects/nplate/views/home.dust",
 		"/opt/Dropbox/projects/nplate/package.json",
 		"/opt/Dropbox/projects/nplate/lib/globals.js",
-		"/opt/Dropbox/projects/nplate/lib/mongoose/mdb.js",
-		"/var/www/html/kungfu/galleries.php",
+		"/opt/Dropbox/projects/nplate/controllers/home.js",
+		"/opt/Dropbox/projects/nplate/views/home.dust",
+		"/opt/Dropbox/projects/nplate/views/header.js",
+		"/opt/Dropbox/projects/nplate/views/website-skeleton.js",
+		"/opt/Dropbox/projects/nplate/lib/is-client-bot.js",
+		"/opt/Dropbox/projects/nplate/lib/session-options.js",
+		"/var/www/html/kungfu/index.php",
+		"/var/www/html/kungfu/js/scripts.js",
+		"/var/www/html/kungfu/ajax_submit_contact.php",
+		"/var/www/html/kungfu/functions.php",
+		"/home/noam/Downloads/responder_SDK/index.php",
+		"/home/noam/Downloads/responder_SDK/OAuth.php",
+		"/tmp/fz3temp-1/.htaccess",
+		"/opt/Dropbox/projects/nplate/lib/i18n.js",
 		"/opt/Dropbox/projects/nplate/lib/mongoose/member-schema.js",
-		"/opt/Dropbox/projects/nplate/node_modules/dustjs-linkedin/package.json",
-		"/opt/Dropbox/projects/nplate/lib/mongoose/members-schema.js",
-		"/root/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/root/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/opt/Dropbox/projects/tickets/public/js/wsGlobal.js",
 		"/opt/Dropbox/projects/nplate/public/css/style.less",
 		"/mnt/ntfs_687gb/wamp/www/monochrome/admin/index.php",
@@ -191,9 +223,9 @@
 		"/tmp/fz3temp-1/styles.css",
 		"/tmp/fz3temp-1/ajax_login.php",
 		"/tmp/fz3temp-1/scripts.js",
+		"/root/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/opt/Dropbox/projects/nplate/lib/aaa.js",
 		"/opt/Dropbox/projects/tickets/app.js",
-		"/opt/Dropbox/projects/nplate/lib/dust-renderer.js",
 		"/opt/Dropbox/projects/nplate/node_modules/dustjs-linkedin/dist/dust-full.js",
 		"/opt/Dropbox/projects/nplate/views/error.dust",
 		"/opt/Dropbox/projects/nplate/index.js",
@@ -269,7 +301,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"tagLog",
+			"home.dust",
+			"G.",
 			"query",
 			"loadSou",
 			"compile",
@@ -309,7 +342,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -318,20 +351,49 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3431,
+						"buffer_size": 3982,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								974,
-								974
+								3296,
+								3296
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 408.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1949,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1018,
+								1018
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -341,105 +403,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "run_nodemon.sh",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 146,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								146,
-								146
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
 					"buffer": 2,
-					"file": "app.js",
+					"file": "controllers/error.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2577,
+						"buffer_size": 760,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								456,
-								456
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 42.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "routes/website.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 286,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "controllers/home.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 312,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								130,
-								130
+								544,
+								544
 							]
 						],
 						"settings":
@@ -455,78 +432,48 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "lib/mongoose/mdb.js",
+					"buffer": 3,
+					"file": "views/error.dust",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1527,
+						"buffer_size": 417,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								356,
-								356
+								395,
+								395
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "lib/dust-renderer.js",
+					"buffer": 4,
+					"file": "routes/website.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2838,
+						"buffer_size": 286,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "node_modules/dustjs-linkedin/lib/server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 421,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								286,
+								286
 							]
 						],
 						"settings":
@@ -537,7 +484,66 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "controllers/website/home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								83,
+								83
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/website/home.dust",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4732,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80,
+								80
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -616,7 +622,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 220.0,
+	"side_bar_width": 227.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

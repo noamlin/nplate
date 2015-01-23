@@ -13,14 +13,14 @@ if(cluster.isMaster) {
 		cluster.fork(); // Fork a new worker
 	}
 
-	cluster.on('fork', function(worker) {
+	cluster.on('fork', function (worker) {
 		bunyanLog.info('forked a new worker. pid: ' + worker.process.pid);
 	});
-	cluster.on('exit', function(worker, code, signal) {
-		bunyanLog.info('worker ' + worker.process.pid + ' died');
+	cluster.on('exit', function (worker, code, signal) {
+		bunyanLog.error('worker ' + worker.process.pid + ' died');
 	});
-	cluster.on('disconnect', function(worker) {
-		bunyanLog.error('worker ' + worker.process.pid + ' disconnected');
+	cluster.on('disconnect', function (worker) {
+		bunyanLog.warn('worker ' + worker.process.pid + ' disconnected');
 		cluster.fork();
 	});
 }
@@ -33,13 +33,14 @@ else { // cluster.isWorker
 
 	// database
 	var dbDomain = domain.create(); // a domain for the database
-	dbDomain.on('error', function(err) {
+	dbDomain.on('error', function (err) {
 		bunyanLog.fatal(err); // log the uncaught exception
 
 		try {
-			var killtimer = setTimeout(function() { // run 30s (in a dangerous territory) and let current connections finish
-			  process.exit(1);
-			}, 30000);
+			var killtimer = setTimeout(function() { // run 15s (in a dangerous territory) and let current connections finish
+				bunyanLog.warn('15 seconds has passed. killing worker forcibly')
+				process.exit(1);
+			}, 15000);
 			killtimer.unref(); // But don't keep the process open just for that!
 
 			try {
@@ -52,9 +53,8 @@ else { // cluster.isWorker
 			// Let the master know we're dead. This will trigger a 'disconnect' in the cluster master, and then it will fork a new worker.
 			cluster.worker.disconnect();
 		}
-		catch (err2) {
-			// oh well, not much we can do at this point.
-			bunyanLog.error(err2);
+		catch (killWorkerErr) {
+			bunyanLog.error(killWorkerErr); // oh well, not much we can do at this point
 		}
 	});
 
@@ -67,21 +67,24 @@ else { // cluster.isWorker
 	var expressApp = require('./app.js');
 	
 	server.on('request', function(request, response) {
-		var requestDomain = domain.create(); // a domain per request
-		requestDomain.on('error', function(err) {
+		var requestDomain = domain.create();
+
+		requestDomain.on('error', function (err) {
 			bunyanLog.fatal(err); // log the uncaught exception
 
 			try {
-				var killtimer = setTimeout(function() { // run 30s (in a dangerous territory) and let current connections finish
-				  process.exit(1);
-				}, 30000);
+				var killtimer = setTimeout(function() { // run 15s (in a dangerous territory) and let current connections finish
+					bunyanLog.warn('15 seconds has passed. killing worker forcibly')
+					process.exit(1);
+				}, 15000);
 				killtimer.unref(); // But don't keep the process open just for that!
 
 				try {
+					bunyanLog.info('server is closing for new connections');
 					server.close(); // stop taking new requests
 				}
 				catch(serverErr) {
-					bunyanLog.warn(serverErr); // server is probably not listening
+					bunyanLog.warn(serverErr); // if we got here then server is probably not listening
 				}
 				
 				// Let the master know we're dead. This will trigger a 'disconnect' in the cluster master, and then it will fork a new worker.
@@ -90,13 +93,16 @@ else { // cluster.isWorker
 				// try to send an error to the request that triggered the problem
 				response.statusCode = 500;
 				response.setHeader('content-type', 'text/plain');
-				res.end(http.STATUS_CODES[500]);
+				response.end(http.STATUS_CODES[500]);
 			}
-			catch (err2) {
-				// oh well, not much we can do at this point.
-				bunyanLog.error(err2);
+			catch (killWorkerErr) {
+				bunyanLog.fatal(killWorkerErr); // oh well, not much we can do at this point
 			}
 		});
+		
+		// must send the domain veriable forward (for later use) in order to explicitly emit 'error' events and thus bypassing express's try-catch which
+		// always catches our errors and chains them to the error-routing (because of this the error never bubbles up to the domain)
+		request.requestDomain = requestDomain;
 
 		requestDomain.add(request);
 		requestDomain.add(response);
