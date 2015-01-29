@@ -8,7 +8,7 @@ module.exports = function(err, req, res, next) {
 		req.requestDomain.emit('error', err);
 	}
 	else { // we created this error because it has an err.status variable which we manually created
-		bunyanLog.warn(err.message + ' - ' + req.originalUrl);
+		bunyanLog.warn(err.message + ' - [original url: ' + req.originalUrl + '] [rewrited/synthesized url: ' + req.url + ']');
 		res.dustRender(
 			"error.dust",
 			{

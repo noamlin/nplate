@@ -1,15 +1,12 @@
 var dust = require('dustjs-linkedin');
 
-module.exports = function(req, res, next) {
-	if(!req.params.part || (req.params.part!=='html' && req.params.part!=='dust' && req.params.part!=='json'))
-		next(); // <<<<<<<<<<<<<< WAS HERE
-
-	res.dustRender(
-		"website/home.dust",
+module.exports = function homePage(req, res, next) {
+	res.dustRender("website/home.dust",
 		{
 			lang: req.clientParams.lang,
 			title: "איך העברית פה?",
-			misc: varDump(req.params)
+			misc: varDump(req.clientParams),
+			misc2: varDump(req.query)
 		},
 		function(err, output) {
 			if(err)
