@@ -39,30 +39,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/var/www/html/monochrome/index.php",
-			"settings":
-			{
-				"buffer_size": 12096,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/html/monochrome/js/scripts.js",
-			"settings":
-			{
-				"buffer_size": 4061,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/html/monochrome/css/styles.less",
-			"settings":
-			{
-				"buffer_size": 5880,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -122,6 +98,14 @@
 	],
 	"file_history":
 	[
+		"/opt/Dropbox/projects/tickets/start_mongod.sh",
+		"/opt/Dropbox/projects/rishumon.sh",
+		"/opt/Dropbox/projects/nplate/views/website/footer.dust",
+		"/opt/Dropbox/projects/nplate/views/website/website-skeleton.dust",
+		"/opt/Dropbox/projects/nplate/views/website/header.dust",
+		"/var/www/html/monochrome/css/styles.less",
+		"/var/www/html/monochrome/js/scripts.js",
+		"/var/www/html/monochrome/index.php",
 		"/opt/Dropbox/projects/nplate/index.js",
 		"/opt/Dropbox/projects/nplate/run_nodemon.sh",
 		"/opt/Dropbox/projects/nplate/app.js",
@@ -157,7 +141,6 @@
 		"/var/www/html/kamary.html",
 		"/media/DC38C6D038C6A8BA/wamp/www/monochrome/admin/ajax_approve_user.php",
 		"/media/DC38C6D038C6A8BA/wamp/www/monochrome/admin/ajax_change_status.php",
-		"/opt/Dropbox/projects/tickets/start_mongod.sh",
 		"/tmp/fz3temp-1/index.php",
 		"/tmp/fz3temp-1/styles.css",
 		"/tmp/fz3temp-1/ajax_login.php",
@@ -277,95 +260,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/var/www/html/monochrome/index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12096,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3109,
-								3109
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1064.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/var/www/html/monochrome/js/scripts.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4061,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2180,
-								2180
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 765.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/var/www/html/monochrome/css/styles.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5880,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2433,
-								2433
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1947.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

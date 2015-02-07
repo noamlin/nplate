@@ -3,9 +3,9 @@
 require('./lib/globals.js');
 
 // cluster for multi-threading
-var cluster = require('cluster');
-var os = require('os');
-var numCPUs = os.cpus().length;
+var cluster = require('cluster'),
+	os = require('os'),
+	numCPUs = os.cpus().length;
 
 if(cluster.isMaster) {
 	var maxAllowedThreads = Math.min(2, numCPUs);
@@ -25,8 +25,8 @@ if(cluster.isMaster) {
 	});
 }
 else { // cluster.isWorker
-	var http = require('http');
-	var domain = require('domain');
+	var http = require('http'),
+		domain = require('domain');
 
 	// create our server object
 	var server = http.createServer();

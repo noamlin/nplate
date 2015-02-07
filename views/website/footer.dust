@@ -1,0 +1,4 @@
+<div class="jumbotron">
+	<h1>FOOTER</h1>
+	<h3>footer data: {footerData|s}</h3>
+</div>

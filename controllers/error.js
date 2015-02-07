@@ -1,3 +1,7 @@
+var myDust = require('../lib/dust-implementation.js');
+
+myDust.compileFile("error.dust", { templateName: "error" });
+
 module.exports = function(err, req, res, next) {
 	if(process.env.NODE_ENV === 'development')
 		var errorMessage = nl2br(err.stack);
@@ -8,9 +12,9 @@ module.exports = function(err, req, res, next) {
 		req.requestDomain.emit('error', err);
 	}
 	else { // we created this error because it has an err.status variable which we manually created
-		bunyanLog.warn(err.message + ' - [original url: ' + req.originalUrl + '] [rewrited/synthesized url: ' + req.url + ']');
-		res.dustRender(
-			"error.dust",
+		bunyanLog.warn(err.message + ' - [original url: ' + req.originalUrl + '] [synthesized url: ' + req.url + ']');
+
+		myDust.render("error",
 			{
 				errorCode: err.status,
 				errorMessage: errorMessage
